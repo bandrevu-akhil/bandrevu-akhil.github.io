@@ -32,6 +32,8 @@
                 document.getElementById("files").style.display="block";
             }
         </script>
+        <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.min.css">
+        <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.components.min.css">
     </head>
     <body>
         <!--
@@ -44,7 +46,7 @@
         </div>
         //-->
 
-        <div >
+        <div class="ms-fontWeight-semibold" >
             <form onsubmit="return false;">
                 Search : <input type="text" name="search"/>
                 
@@ -57,16 +59,16 @@
             </form>
             
             <div id ="files" >
-                <div onclick="display1()" >
-                    <h3> presentation.ppt </h3>
+                <div onclick="display1()" class="ms-bgColor-neutralLight" style="height:50px;" >
+                    <h3  style="top:10px; position:relative;"> presentation.ppt </h3>
                 </div>
-                <div id="a2" style="display:none; ">
+                <div id="a2" style="display:none; height:20px;" class="ms-bgColor-themeLight">
                     <button> Properties </button>   
                 </div>
-                <div onclick="display2()" >
-                    <h3> report.docx </h3>
+                <div onclick="display2()" class="ms-bgColor-neutralLight"  style="height:50px;" >
+                    <h3 style="top:10px; position:relative;"> report.docx </h3>
                 </div>
-                <div id= "a3" style="display:none;">
+                <div id= "a3" style="display:none; height:20px;" class="ms-bgColor-themeLight">
                     <button> Properties</button>
                 </div>
             </div>
