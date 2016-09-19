@@ -1,1 +1,74 @@
-"Hello World" 
+<html>
+    <head>
+        <title>search Add in </title>
+        <script>
+            var flag=-1;
+            
+            function myFunction(){
+                flag=flag*-1;
+                if(flag==1)
+                    document.getElementById("a").style.display="block";
+                else
+                    document.getElementById("a").style.display="none";
+               
+            }
+            var flag2=-1;
+            var flag3=-1;
+            function display1(){
+                 flag2=flag2*-1;
+                if(flag2==1)
+                    document.getElementById("a2").style.display="block";
+                else
+                    document.getElementById("a2").style.display="none";
+            }
+            function display2(){
+                 flag3=flag3*-1;
+                if(flag3==1)
+                    document.getElementById("a3").style.display="block";
+                else
+                    document.getElementById("a3").style.display="none";
+            }
+            function display3(){
+                document.getElementById("files").style.display="block";
+            }
+        </script>
+    </head>
+    <body>
+        <div style="width:10%; float:left;  position:relative; top:30px; border-right: 2px solid black">
+           <div>
+               <h4 onclick="display3()">1. repo1</h4>
+               <h4>2. repo2</h4>
+               <h4>3. repo3</h4>
+            </div>
+        </div>
+
+        <div style=" width: 50%; float:left;">
+            <form onsubmit="return false;">
+                Search : <input type="text" name="search"/>
+                
+                <button onclick="myFunction()">...</button>
+            <br>
+            <div id="a" style="display:none;  "  >
+                <button>open</button>
+                <button>save</button>
+            </div>
+            </form>
+            
+            <div id ="files" style="display:none;">
+                <div onclick="display1()" >
+                    <h3> presentation.ppt </h3>
+                </div>
+                <div id="a2" style="display:none; ">
+                    <button> Properties </button>   
+                </div>
+                <div onclick="display2()" >
+                    <h3> report.docx </h3>
+                </div>
+                <div id= "a3" style="display:none;">
+                    <button> Properties</button>
+                </div>
+            </div>
+           
+            </div>
+    </body>
+</html>
