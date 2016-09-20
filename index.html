@@ -1,9 +1,16 @@
 <html>
     <head>
         <title>Search Addin </title>
+        <script>
+            function refresh(){
+                window.location.reload();
+            }
+        </script>
+
     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.min.css">
     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.components.min.css">
     </head>
+
     <body>
         <div class="ms-grid">
              <div class="ms-Grid-row ms-bgColor-neutralTertiaryAlt">
@@ -25,6 +32,8 @@
                  <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2 ms-bgColor-neutralSecondary">First</div>
                  <div class="ms-Grid-col ms-u-sm6 ms-u-md8 ms-u-lg10">Second</div>
              </div>
+
         </div>
+        <button onclick="refresh()">refresh</button>
     </body>
 </html>
