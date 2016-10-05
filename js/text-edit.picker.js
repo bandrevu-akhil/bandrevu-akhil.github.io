@@ -115,7 +115,7 @@ var markdownEditor = {
 
         // Build the picker options that include the filename data URI, and callback methods
         var options = {
-            clientId: "57a7b669-a02a-4456-8091-cb027d765c86",
+            clientId: "1fd8b6bd-4585-4491-a802-7bc9f0fde5da",
             action: "save",
             sourceUri: dataUri,
             fileName: filename,
