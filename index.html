@@ -24,7 +24,8 @@
                           progress: function(p) { console.log("2"); },
                           cancel: function() {console.log("3"); },
                           error: function(e) { console.log(e); }
-                        }
+                        };
+                        console.log(dataURL);
                         console.log("3");
                       OneDrive.save(odOptions);
                     };
