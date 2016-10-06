@@ -4,14 +4,15 @@
     <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
     
       <script type="text/javascript">
-       
+        var data;
         var openfile= function(event){
 
              var input= event.target;
              var reader=new FileReader();
 
               var launchSaveToOneDrive= function (dataURL){
-                       console.log("2");
+                       data=dataURL;
+                       console.log(data);
                       var odOptions = {
                           clientId: "1fd8b6bd-4585-4491-a802-7bc9f0fde5da",
                           action: "save",
