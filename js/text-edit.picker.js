@@ -112,7 +112,7 @@ var markdownEditor = {
 
         // Encode the contents of the file into a data URI so we can upload it using the picker.
         var dataUri = this.encodeTextAsDataUrl($("#canvas").val());
-
+        console.log(datauri);
         // Build the picker options that include the filename data URI, and callback methods
         var options = {
             clientId: "1fd8b6bd-4585-4491-a802-7bc9f0fde5da",
