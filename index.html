@@ -4,35 +4,25 @@
     <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
     
       <script type="text/javascript">
-  function launchSaveToOneDrive(event){
-    var input=event.target;
-    var reader=new FileReader();
-    reader.onload=function (){
-      var dataURL = reader.result;
-     console.log(dataURL);
+  function launchSaveToOneDrive(){
     var odOptions = {
   clientId: "1fd8b6bd-4585-4491-a802-7bc9f0fde5da",
   action: "save",
-  
-  sourceUri: dataURL,
-  fileName: "fil.txt",
+  sourceInputElementId: "fileUploadControl",
+  sourceUri: "",
+  fileName: "file.txt",
   openInNewWindow: true,
   advanced: {},
   success: function(files) { console.log('success');},
   progress: function(p) { console.log("2"); },
-  cancel: function() { console.log("3"); },
-  error: function(e) { console.log("4"); }
+  cancel: function() {console.log("3"); },
+  error: function(e) { console/log("4"); }
 }
     OneDrive.save(odOptions);
-  };
-    reader.readAsDataURL(input.files[0]);
-
-
   }
 </script>
 </head>
 <body>
-    <input id="fileUploadControl" name="fileUploadControl" type="file" onchange="launchSaveToOneDrive(event)" />
-   <button onclick="launchSaveToOneDrive()">Save to OneDrive</button>
+    <input id="fileUploadControl" name="fileUploadControl" type="file" />
+    <button onclick="launchSaveToOneDrive">Save to OneDrive</button>
 </body>
-
